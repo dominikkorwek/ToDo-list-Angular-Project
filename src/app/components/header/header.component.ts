@@ -28,7 +28,7 @@ export class HeaderComponent{
 
 
   toggleAddTask() {
-    this.uiService.toggleAddTask();
+    this.uiService.togleAddTask();
   }
 
   hasRoute(route: string){
