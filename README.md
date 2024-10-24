@@ -12,15 +12,20 @@ This repository contains a simple **To-Do List** application built with **Angula
 ## Application Structure
 
 - **Components**:
-  - `TaskListComponent`: Displays the list of tasks and provides options to delete or toggle reminders.
-  - `TaskItemComponent`: Represents a single task in the list, with actions to delete or toggle the reminder.
-  - `AddTaskComponent`: Provides a form to add a new task.
-
+  - `about`: Displays Task Tracker's about.
+  - `add-task`: Displays form to create task, where possible to set name, date and reminder.
+  - `button`: Custom button.
+  - `footer`: Displays Task Tracker's footer.
+  - `header`: Displays Task Tracker's header.
+  - `tasks`: Displays all tasks.
+  - `tasks-item`: Display task info.
+    
 - **Services**:
-  - `TaskService`: Manages the tasks' state, including adding, deleting, and toggling reminders. It also handles communication with a potential backend API.
+  - `task`: Manages the tasks' state, including adding, deleting. It also handles communication with a potential backend API.
+  - `ui`: Manages the reminders' state localy.
 
 - **Models**:
-  - `Task`: Defines the structure of a task with properties like `id`, `title`, and `reminder`.
+  - `mock-tasks`: Defines the structure of a task with properties: `id`, `text` as title,`day` and `reminder`.
 
 ## How to Run
 
@@ -33,7 +38,7 @@ This repository contains a simple **To-Do List** application built with **Angula
 
 2. **Install dependencies**:
 
-    Make sure you have Node.js and Angular CLI installed. Then, install the project dependencies:
+    Make sure you have Node.js and Angular CLI installed. Then, install the project       dependencies:
 
     ```bash
     npm install
@@ -48,6 +53,11 @@ This repository contains a simple **To-Do List** application built with **Angula
     ```
 
     The application will be available at `http://localhost:4200`.
+
+4. **Connect with backend**
+
+    By default backend Url is set as apiUrl with value `http://localhost:5000/tasks`.
+    It can be changed in `task.service.ts` in `services`. 
 
 ## Usage
 
